@@ -1,0 +1,158 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 20px 0;
+    background: #F5DEB3;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-style: bold;
+    color: #A52A2A;
+}
+
+.timer,
+.counter {
+    color: #A52A2A;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.counter {
+    margin-bottom: 15px;
+}
+
+@media (max-device-width: 800px),(max-width:800px) {
+  .grid {
+    background: #BC8F8F;
+    border-radius: 5px;
+    width: 50%;
+    height: auto;
+    box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+}
+}
+
+.grid {
+    max-width: 960px;
+    background: #BC8F8F;
+    border-radius: 5px;
+
+    box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+}
+
+.card {
+    position: relative;
+    -webkit-transition: all .4s linear;
+    -o-transition: all .4s linear;
+    transition: all .4s linear;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    margin: 5px;
+}
+
+.card,
+.back,
+.front {
+    height: 150px;
+    width: 150px;
+}
+
+.back,
+.front {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.front {
+    background: #FAB942 url('img/back.jpg') no-repeat center center / contain;
+}
+
+.back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    background-color: #FFFFFF;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.selected {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.match .front {
+    background: #BC8F8F !important;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 70px auto;
+    padding: 20px;
+    background: #ffffff;
+
+    border-radius: 5px;
+    overflow: hidden;
+    width: 70%;
+    position: relative;
+    font-size: 1.5rem;
+}
+
+#play-again {
+    background-color: #A52A2A;
+    padding: 0.7rem 1rem;
+    font-size: 1.1rem;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    color: #ffffff;
+    border: 0px;
+    border-radius: 5px;
+}
+
+#play-again: hover {
+    opacity: 0.9;
+    transition-duration: 0.2s;
+}

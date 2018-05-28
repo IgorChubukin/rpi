@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">Память</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Игра "Память"</h1>
+
+    <div class="timer">
+        Время: 0
+    </div>
+    <div class="counter">
+        Ходов: 0
+    </div>
+
+    <div id="game"></div>
+
+    <div id="result_window" class="overlay">
+        <div class="popup">
+            <h2>Победа!</h2>
+            <div class="content-2">
+                <p>Ходов: <span id=finalMove> </span></p>
+                <p> <span id=totalTime> </span> </p>
+            </div>
+            <button id="play-again" onclick="playAgain()">
+                Начать сначала</a>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
